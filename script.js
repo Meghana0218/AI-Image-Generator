@@ -23,7 +23,7 @@ const updateImageCard = (imgDataArray) => {
 const generateAiImages = async (userPrompt, userImgQuantity) => {
   try {
     // Call your backend instead of OpenAI directly
-    const response = await fetch("http://localhost:3000/generate", {
+    const response = await fetch("https://ai-image-generator-qvbw.onrender.com/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt: userPrompt, n: userImgQuantity }),
